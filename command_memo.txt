@@ -1,0 +1,1 @@
+waf configure --msvc_version="msvc 17.5" --msvc_targets="x64" -T release --prefix=C:\Users\S\Documents\GitHub\xash3d-fwgs\Release --gamedir=UF -8 --enable-bsp2 --sdl2=C:\Users\S\Documents\GitHub\xash3d-fwgs\SDL2 --disable-soft --disable-menu-changegame

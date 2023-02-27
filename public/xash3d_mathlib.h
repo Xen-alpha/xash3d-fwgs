@@ -24,10 +24,6 @@ GNU General Public License for more details.
 #include "build.h"
 #include "com_model.h"
 
-#ifdef XASH_MSVC
-#pragma warning(disable : 4201)	// nonstandard extension used
-#endif
-
 // euler angle order
 #define PITCH		0
 #define YAW		1
@@ -81,6 +77,9 @@ GNU General Public License for more details.
 #define Q_round( x, y )	(floor( x / y + 0.5f ) * y )
 #define Q_rint(x)		((x) < 0.0f ? ((int)((x)-0.5f)) : ((int)((x)+0.5f)))
 
+#ifdef XASH_IRIX
+#undef isnan
+#endif
 #ifdef isnan // check for C99 isnan
 #define IS_NAN isnan
 #else
